@@ -1,7 +1,7 @@
 <script setup>
-// definePageMeta({
-//   middleware: 'sanctum:guest',
-// })
+definePageMeta({
+  middleware: 'sanctum:guest',
+})
 </script>
 <template>
   <UContainer>
