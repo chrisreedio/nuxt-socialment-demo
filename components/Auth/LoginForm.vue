@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import type { FormError } from '#ui/types'
+
+const { login } = useSanctumAuth()
 const runtimeConfig = useRuntimeConfig()
 const baseUrl = runtimeConfig.public.sanctum.baseUrl
 
@@ -40,6 +42,7 @@ const providers = [
 
 function onSubmit(data) {
   console.log('Submitted', data)
+  login(data)
 }
 </script>
 
