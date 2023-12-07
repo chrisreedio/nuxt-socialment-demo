@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import type { FormError } from '#ui/types'
+const runtimeConfig = useRuntimeConfig()
+const baseUrl = runtimeConfig.public.sanctum.baseUrl
 
 const fields = [
   {
@@ -30,6 +32,8 @@ const providers = [
     color: 'azure' as const,
     click: () => {
       console.log('Redirect to GitHub')
+      // Redirect to Azure
+      window.location.href = `${baseUrl}/login/azure`
     },
   },
 ]
