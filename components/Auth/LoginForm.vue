@@ -2,8 +2,7 @@
 import type { FormError } from '#ui/types'
 
 const { login } = useSanctumAuth()
-const runtimeConfig = useRuntimeConfig()
-const baseUrl = runtimeConfig.public.sanctum.baseUrl
+const baseUrl = useRuntimeConfig().public.sanctum.baseUrl
 
 const fields = [
   {
@@ -39,11 +38,6 @@ const providers = [
     },
   },
 ]
-
-function onSubmit(data) {
-  console.log('Submitted', data)
-  login(data)
-}
 </script>
 
 <!-- eslint-disable vue/multiline-html-element-content-newline -->
@@ -58,7 +52,7 @@ function onSubmit(data) {
       align="top"
       icon="i-heroicons-lock-closed"
       :ui="{ base: 'text-center', footer: 'text-center' }"
-      @submit="onSubmit"
+      @submit="login"
     >
       <!-- <template #description>
         Don't have an account?
