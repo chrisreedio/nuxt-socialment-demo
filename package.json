@@ -15,7 +15,8 @@
     "@iconify-json/heroicons": "^1.1.14",
     "@iconify-json/simple-icons": "^1.1.80",
     "@nuxt/ui-pro": "npm:@nuxt/ui-pro-edge@^0.5.0-28364941.0cb25c4",
-    "nuxt": "^3.8.2"
+    "nuxt": "^3.8.2",
+    "nuxt-auth-sanctum": "^0.0.13"
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.4",
